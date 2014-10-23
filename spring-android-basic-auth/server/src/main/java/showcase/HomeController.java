@@ -46,6 +46,11 @@ public class HomeController {
 	@RequestMapping(value = "/getmessage", method = RequestMethod.GET, produces = "application/json")
 	public @ResponseBody Message getMessage() {
 		logger.info("Accessing protected resource");
+		try {
+		    BlinkGpioExample.main(new String[]{});
+		} catch (java.lang.InterruptedException e) {
+		    System.out.println("Error con la llamada al GPIO");
+		}
 		return new Message(100, "Congratulations!", "You have accessed a Basic Auth protected resource.");
 	}
 

@@ -31,6 +31,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Pi4J -->
+		<dependency>
+		    <groupId>com.pi4j</groupId>
+		    <artifactId>pi4j-core</artifactId>
+		    <version>0.0.5</version>
+		</dependency>
 	</dependencies>
 
 	<properties>
@@ -51,6 +58,15 @@
 			<id>spring-releases</id>
 			<url>http://repo.spring.io/libs-release</url>
 		</repository>
+	        <repository>
+			<id>oss-snapshots-repo</id>
+			<name>Sonatype OSS Maven Repository</name>
+			<url>https://oss.sonatype.org/content/groups/public</url>
+			<snapshots>
+			    <enabled>true</enabled>
+			    <updatePolicy>always</updatePolicy>
+			</snapshots>
+	    </repository>
 	</repositories>
 
 	<pluginRepositories>
